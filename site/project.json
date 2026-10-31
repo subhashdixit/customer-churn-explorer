@@ -1,0 +1,13 @@
+{
+  "old": "Customer_Churn_Prediction_and_GUI",
+  "name": "customer-churn-explorer",
+  "title": "Customer Churn Explorer",
+  "kind": "classification",
+  "target": "Exited",
+  "unit": "source churn label",
+  "color": "#316bb4",
+  "intro": "Explore historical bank-customer churn from financial and engagement features.",
+  "limitations": "The target is the source Exited flag. Names, customer IDs and gender are excluded. Historical churn associations do not establish why a customer left or justify lending decisions.",
+  "positiveLabel": "Exited source label",
+  "negativeLabel": "Retained source label"
+}

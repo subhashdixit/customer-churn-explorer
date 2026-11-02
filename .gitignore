@@ -171,3 +171,6 @@ cython_debug/
 node_modules/
 .pylint-cache/
 .venv/
+
+# Install dependencies locally with npm ci; never commit node_modules.
+node_modules/

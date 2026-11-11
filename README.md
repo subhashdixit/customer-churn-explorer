@@ -2,7 +2,7 @@
 
 ## 1. Project overview
 
-Explore how a binary model estimates historical bank-customer churn and how the decision threshold changes predictions. Python trains the model and JavaScript runs it in the browser.
+Estimate which bank customers resemble historical customers who left. The repository trains and evaluates a churn model in Python and ships it as a browser tool for scoring profiles and examining decision thresholds.
 
 [Live demo](https://subhashdixit.github.io/customer-churn-explorer/) · [Source repository](https://github.com/subhashdixit/customer-churn-explorer)
 
@@ -10,7 +10,17 @@ Explore how a binary model estimates historical bank-customer churn and how the 
 
 ## 2. Motivation and problem statement
 
-A single churn score hides the decision policy behind a flag. An analyst needs to compare missed churners with false positives and check whether changing the threshold improves the tradeoff. This explorer makes the historical model, threshold, and held-out errors visible in the same interface.
+### Objective
+
+Predict the historical `Exited` flag from a bank customer’s account and engagement attributes and measure how well the model identifies the minority churn class.
+
+### Problem statement
+
+Given a customer profile, estimate a churn score and apply a decision threshold to flag profiles for review. The source contains more customers who stayed than customers who left, so overall accuracy can mask missed churn cases.
+
+### Motivation
+
+A retention analyst needs to balance the time spent reviewing false alarms against the risk of missing customers who may leave. The project compares models against a baseline, evaluates on held-out records, and lets users see how changing the threshold affects that tradeoff. The historical labels record whether a customer exited.
 
 ## 3. Solution and scope
 
